@@ -16,6 +16,10 @@ class Test(unittest.TestCase):
         broth = Broth(get("http://www.nuforc.org/webreports/ndxlAK.html").text)
         tables = broth.tables
         self.assertEqual(len(broth.tables), 1)
+
+    def testText(self):
+        text = Broth(get("http://danieljdufour.com/").text).text
+        self.assertTrue(len(text) > 10)
         
 
 if __name__ == '__main__':

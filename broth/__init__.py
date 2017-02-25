@@ -22,3 +22,10 @@ class Broth:
     @property
     def tables(self):
         return self.soup.select("table")
+
+    def __getattr__(self, attribute):
+        try:
+            return self.soup.__getattribute__(attribute)
+        except Exception as e:
+            return e
+
