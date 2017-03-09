@@ -20,6 +20,11 @@ class Test(unittest.TestCase):
     def testText(self):
         text = Broth(get("http://danieljdufour.com/").text).text
         self.assertTrue(len(text) > 10)
+
+    def testTitleString(self):
+        title_string = Broth(get("http://danieljdufour.com/").text).title_string
+        self.assertEqual(title_string, "Daniel J. Dufour")
+ 
         
 
 if __name__ == '__main__':

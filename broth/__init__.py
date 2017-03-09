@@ -23,6 +23,13 @@ class Broth:
     def tables(self):
         return self.soup.select("table")
 
+    @property
+    def title_string(self):
+        title = self.soup.title
+        title_string = title.string
+        if title_string: 
+            return title_string
+
     def __getattr__(self, attribute):
         try:
             return self.soup.__getattribute__(attribute)
