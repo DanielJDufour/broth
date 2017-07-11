@@ -13,4 +13,5 @@ setup(
   download_url = 'https://github.com/DanielJDufour/broth/tarball/download',
   keywords = ['extraction', 'BeautifulSoup','python'],
   classifiers = [],
+  install_requires=["beautifulsoup4"]
 )
