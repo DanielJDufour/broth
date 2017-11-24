@@ -5,7 +5,7 @@ setup(
   packages = ['broth'],
   package_dir = {'broth': 'broth'},
   package_data = {'broth': ['__init__.py']},
-  version = '0.6',
+  version = '0.7',
   description = 'Convenient Wrapper for Beautiful Soup',
   author = 'Daniel J. Dufour',
   author_email = 'daniel.j.dufour@gmail.com',
